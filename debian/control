@@ -14,4 +14,4 @@ Depends: vyatta-cfg-system,
  ${misc:Depends}
 Replaces: vyatta-teredo-relay
 Description: Vyatatta teredo relay configuration templates and scripts
-  Vyatatta teredo relay configuration templates and scripts
+ Vyatatta teredo relay configuration templates and scripts

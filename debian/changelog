@@ -1,3 +1,9 @@
+vyatta-teredo-relay (1.0) unstable; urgency=low
+
+  * First working version
+
+ -- Florian Pflug <fgp@phlo.org>  Thu, 10 Oct 2013 01:04:56 +0200
+
 vyatta-teredo-relay (0.1) unstable; urgency=low
 
   * Initial release
