@@ -17,39 +17,6 @@ DEB_BUILD_GNU_TYPE  ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
 PACKAGE=vyatta-teredo-relay
 PKGDIR=$(CURDIR)/debian/$(PACKAGE)
 
-CFLAGS = -Wall -g
-
-configure	 = ./configure
-configure	+= --host=$(DEB_HOST_GNU_TYPE)
-configure	+= --build=$(DEB_BUILD_GNU_TYPE)
-configure	+= --prefix=/opt/vyatta
-configure	+= --mandir=\$${prefix}/share/man
-configure	+= --infodir=\$${prefix}/share/info
-configure	+= CFLAGS="$(CFLAGS)"
-configure	+= LDFLAGS="-Wl,-z,defs"
-
-ifneq (,$(findstring noopt,$(DEB_BUILD_OPTIONS)))
-	CFLAGS += -O0
-else
-	CFLAGS += -O2
-endif
-
-configure: configure.ac Makefile.am
-	chmod +x debian/autogen.sh
-	debian/autogen.sh
-
-config.status: configure
-	dh_testdir
-	rm -f config.cache
-	$(configure)
-
-build: build-stamp
-
-build-stamp:  config.status
-	dh_testdir
-	$(MAKE)
-	touch $@
-
 clean: clean-patched
 
 # Clean everything up, including everything auto-generated
@@ -57,20 +24,15 @@ clean: clean-patched
 clean-patched:
 	dh_testdir
 	dh_testroot
-	if test -f Makefile ; then $(MAKE) clean distclean ; fi
-	rm -f build-stamp
-	rm -f config.status config.sub config.guess config.log
-	rm -f aclocal.m4 configure Makefile.in Makefile INSTALL
-	rm -rf config
 	dh_clean 
 
-install: build
+install:
 	dh_testdir
 	dh_testroot
 	dh_clean -k 
 	dh_installdirs
 
-	$(MAKE) DESTDIR=$(PKGDIR) install
+	DESTDIR=$(PKGDIR) ./install.sh
 
 	install -D --mode=0644 debian/lintian $(PKGDIR)/usr/share/lintian/overrides/$(PACKAGE)
 
