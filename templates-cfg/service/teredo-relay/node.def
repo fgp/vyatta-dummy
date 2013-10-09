@@ -1,3 +1,4 @@
+priority: 930
 help: teredo relay settings
 end:
 	if [ ${COMMIT_ACTION} == 'SET' -o ${COMMIT_ACTION} = 'ACTIVE' ]; then

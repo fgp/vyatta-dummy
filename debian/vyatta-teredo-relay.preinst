@@ -5,6 +5,8 @@ set -e
 if [ "$1" != "upgrade" ]; then
 	dpkg-divert --package vyatta-teredo-relay --add --rename \
 	--divert /etc/default/miredo.vyatta-orig /etc/default/miredo
+	
+	update-rc.d miredo stop 02 0 1 2 3 4 5 6
 
 	(echo '#Will be overwritten by Vyatta, do not edit!'
 	 echo 'START_MIREDO=false'

@@ -4,9 +4,11 @@ set -e
 
 if [ "$1" = "remove" -o "$1" = "abort-install" -o "$1" = "disappear" ] ; then
 	rm /etc/default/miredo
-
+	
 	dpkg-divert --package vyatta-teredo-relay --remove --rename \
 	--divert /etc/default/miredo.vyatta-orig /etc/default/miredo
+	
+	update-rc.d miredo defaults
 fi
 
 #DEBHELPER#
