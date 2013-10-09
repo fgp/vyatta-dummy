@@ -1,0 +1,5 @@
+/debian/files
+/debian/vyatta-teredo-relay/
+/debian/vyatta-teredo-relay.substvars
+/debian/vyatta-teredo-relay.debhelper.log
+
