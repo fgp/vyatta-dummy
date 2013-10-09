@@ -1,6 +1,5 @@
-vyatta-dummy (1.0.0) unstable; urgency=low
+vyatta-teredo-relay (0.1) unstable; urgency=low
 
-  * Initial release.
+  * Initial release
 
- -- Daniil Baturin <daniil@baturin.org>  Sat, 17 Aug 2013 01:32:53 -0700
-
+ -- Florian Pflug <fgp@phlo.org>  Wed, 09 Oct 2013 20:26:05 +0200

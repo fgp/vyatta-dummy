@@ -1,6 +1,6 @@
 The Debian Package vyatta-dummy
 -------------------------------
 
-This package is a Vyatta package skeleton.
+This package allows a teredo relay to be configured via Vyatta
 
- -- Daniil Baturin <daniil@baturin.org>  Sat, 17 Aug 2013 01:32:10 -0700
+ -- Florian Pflug <fgp@phlo.org>  Wed Oct  9 20:16:03 CEST 2013

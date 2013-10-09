@@ -1,16 +1,17 @@
-Source: vyatta-dummy
+Source: vyatta-teredo-relay
 Section: contrib/net
 Priority: extra
-Maintainer: SO3 Group <maintainers@so3group.net>
+Maintainer: Florian Pflug <fgp@phlo.org>
 Standards-Version: 3.9.1
 Build-Depends: debhelper (>= 5), autotools-dev, autoconf
 
-Package: vyatta-dummy
+Package: vyatta-teredo-relay
 Architecture: all
 Depends: vyatta-cfg-system,
  vyatta-cfg,
  vyatta-op,
+ miredo,
  ${misc:Depends}
-Replaces: vyatta-dummy
-Description: Vyatta package skeleton
- Vyatta package skeleton
+Replaces: vyatta-teredo-relay
+Description: Vyatatta teredo relay configuration templates and scripts
+  Vyatatta teredo relay configuration templates and scripts
