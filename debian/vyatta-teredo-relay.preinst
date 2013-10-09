@@ -1,0 +1,15 @@
+#!/bin/sh -e
+
+set -e
+
+if [ "$1" != "upgrade" ]; then
+	dpkg-divert --package vyatta-teredo-relay --add --rename \
+	--divert /etc/default/miredo.vyatta-orig /etc/default/miredo
+
+	(echo '#Will be overwritten by Vyatta, do not edit!'
+	 echo 'START_MIREDO=false'
+	 echo 'DAEMON_ARGS=""'
+	) > /etc/default/miredo
+fi
+
+#DEBHELPER#

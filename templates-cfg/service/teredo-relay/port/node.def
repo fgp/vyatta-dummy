@@ -1,0 +1,7 @@
+default: u32
+default: 3544
+help: Port used to communicate with teredo clients. Must be publicly accessible.
+val_help: u32:1-65535; Numeric IP port
+
+syntax:expression: $VAR(@) > 0 && $VAR(@) <= 65535 ; \
+	"Port number bust be in range 1 to 65535"

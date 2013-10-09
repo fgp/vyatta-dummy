@@ -1,0 +1,2 @@
+type: ipv4
+help: Public IPv4 address used to communicate with Teredo clients
