@@ -1,3 +1,9 @@
+vyatta-teredo-relay (2.0.1) unstable; urgency=low
+
+  * Reverted to using end: instead of create:/update:/delete:
+
+ -- Florian Pflug <fgp@phlo.org>  Thu, 10 Oct 2013 18:45:45 +0200
+
 vyatta-teredo-relay (2.0) unstable; urgency=low
 
   * Factored out config generation and daemon stopping/starting into a separate script
