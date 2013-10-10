@@ -3,15 +3,22 @@
 set -e
 
 if [ "$1" != "upgrade" ]; then
+	# Divert /etc/default/miredo out of the way, Vyatta
+	# will want to overwrite this file
 	dpkg-divert --package vyatta-teredo-relay --add --rename \
 	--divert /etc/default/miredo.vyatta-orig /etc/default/miredo
 	
-	update-rc.d miredo stop 02 0 1 2 3 4 5 6
-
+	# Provide a stub /etc/default/miredo until Vyatta
+	# writes one itself	
 	(echo '#Will be overwritten by Vyatta, do not edit!'
 	 echo 'START_MIREDO=false'
 	 echo 'DAEMON_ARGS=""'
 	) > /etc/default/miredo
+
+	# Don't start mirede at boot, let Vyatta do that
+	# Since we provide /etc/insserv/overrides/miredo, a later
+	# update-rc.d miredo defaults shouldn't undo this.
+	update-rc.d -f miredo remove
 fi
 
 #DEBHELPER#

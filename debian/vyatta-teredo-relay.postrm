@@ -3,11 +3,15 @@
 set -e
 
 if [ "$1" = "remove" -o "$1" = "abort-install" -o "$1" = "disappear" ] ; then
+	# Remove Vyatta-generated /etc/default/miredo
 	rm /etc/default/miredo
 	
+	# Restore original /etc/default/miredo file
 	dpkg-divert --package vyatta-teredo-relay --remove --rename \
 	--divert /etc/default/miredo.vyatta-orig /etc/default/miredo
 	
+	# Restore original miredo boot behaviour
+	update-rc.d -f miredo remove
 	update-rc.d miredo defaults
 fi
 
