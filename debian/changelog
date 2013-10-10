@@ -1,4 +1,13 @@
-vyatta-teredo-relay (1.0.1) precise; urgency=low
+vyatta-teredo-relay (2.0) unstable; urgency=low
+
+  * Factored out config generation and daemon stopping/starting into a separate script
+  * Moved from service teredo-relay to interfaces teredo-relay teredo-relay0
+  * Allow firewall rulesets to be attached
+  * Use git-buildpackage
+
+ -- Florian Pflug <fgp@phlo.org>  Thu, 10 Oct 2013 17:58:26 +0200
+
+vyatta-teredo-relay (1.0.1) unstable; urgency=low
 
   * Fixed booting
 
