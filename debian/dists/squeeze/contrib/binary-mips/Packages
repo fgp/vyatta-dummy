@@ -1,0 +1,17 @@
+Package: vyatta-teredo-relay
+Version: 1.0.1
+Architecture: all
+Maintainer: Florian Pflug <fgp@phlo.org>
+Installed-Size: 85
+Depends: vyatta-cfg-system, vyatta-cfg, vyatta-op, miredo
+Replaces: vyatta-teredo-relay
+Priority: extra
+Section: contrib/net
+Filename: pool/contrib/v/vyatta-teredo-relay/vyatta-teredo-relay_1.0.1_all.deb
+Size: 3980
+SHA256: 9806718c0a459fc11762a3ff264b76656d64b27e8900ba2940eec5b7e54e75fa
+SHA1: 96571561a68a5da0549268591915376c313675cb
+MD5sum: 88c2fdc2e5dc9d176a166d0d079c4774
+Description: Vyatatta teredo relay configuration templates and scripts
+ Vyatatta teredo relay configuration templates and scripts
+

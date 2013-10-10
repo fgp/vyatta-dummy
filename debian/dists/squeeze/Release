@@ -1,0 +1,19 @@
+Origin: Florian Pflug
+Label: Florian Pflug
+Codename: squeeze
+Date: Thu, 10 Oct 2013 01:09:18 UTC
+Architectures: mips
+Components: contrib
+Description: Vyatta toredo relay extension APT repository
+MD5Sum:
+ 7e3614a669e6aadbb7c3d20bd4cfedf8 629 contrib/binary-mips/Packages
+ 2d16bb5e5173c667abfb9c7f35dfb212 388 contrib/binary-mips/Packages.gz
+ de1321cb1fb1834498e759aa896c43c2 139 contrib/binary-mips/Release
+SHA1:
+ eb8c47981d8dc4582f8c3c8d43a21937223ac625 629 contrib/binary-mips/Packages
+ a5e3fd215b63f7922e1ef5f2221ba2f5af525a95 388 contrib/binary-mips/Packages.gz
+ ceb5144b5fb4d2c1f141a92e7d04f80ed8f9ac6f 139 contrib/binary-mips/Release
+SHA256:
+ 1ee13c10a0d86e6a7443503f241afab7802f6aa9f502f3e45516a2fce9b45b25 629 contrib/binary-mips/Packages
+ 95d987b7754f6ad91067e8285bea6471c63ed983e44c2d5b0fad9136ea644948 388 contrib/binary-mips/Packages.gz
+ 3f8d2bd01a9ba2233aee0ea1111de5f8eea74bcb06fe9c80d9e8dd3370717ca6 139 contrib/binary-mips/Release
