@@ -17,6 +17,10 @@ DEB_BUILD_GNU_TYPE  ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
 PACKAGE=vyatta-teredo-relay
 PKGDIR=$(CURDIR)/debian/$(PACKAGE)
 
+build: build-indep build-arch
+build-indep:
+build-arch:
+
 clean: clean-patched
 
 # Clean everything up, including everything auto-generated
@@ -24,16 +28,20 @@ clean: clean-patched
 clean-patched:
 	dh_testdir
 	dh_testroot
+	if test -f Makefile ; then $(MAKE) clean distclean ; fi
+	rm -f build-stamp
+	rm -f config.status config.sub config.guess config.log
+	rm -f aclocal.m4 configure Makefile.in Makefile INSTALL
+	rm -rf config
 	dh_clean 
 
-install:
+install: build
 	dh_testdir
 	dh_testroot
 	dh_clean -k 
 	dh_installdirs
 
 	DESTDIR=$(PKGDIR) ./install.sh
-
 	install -D --mode=0644 debian/lintian $(PKGDIR)/usr/share/lintian/overrides/$(PACKAGE)
 
 # Build architecture-independent files here.
@@ -64,4 +72,4 @@ binary-arch: build install
 # so; we have nothing to do by default.
 
 binary: binary-indep binary-arch
-.PHONY: build clean binary-indep binary-arch binary install 
+.PHONY: build build-indep build-arch clean binary-indep binary-arch binary install 

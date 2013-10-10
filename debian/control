@@ -2,8 +2,8 @@ Source: vyatta-teredo-relay
 Section: contrib/net
 Priority: extra
 Maintainer: Florian Pflug <fgp@phlo.org>
-Standards-Version: 3.9.1
-Build-Depends: debhelper (>= 5), autotools-dev, autoconf
+Standards-Version: 3.9.3
+Build-Depends: debhelper (>= 5)
 
 Package: vyatta-teredo-relay
 Architecture: all

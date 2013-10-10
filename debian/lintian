@@ -1,2 +1,7 @@
+vyatta-teredo-relay: description-synopsis-is-duplicated
+vyatta-teredo-relay: duplicate-changelog-files
 vyatta-teredo-relay: file-in-unusual-dir
 vyatta-teredo-relay: dir-or-file-in-opt
+vyatta-teredo-relay: duplicate-updaterc.d-calls-in-postrm
+vyatta-teredo-relay: postrm-contains-additional-updaterc.d-calls
+vyatta-teredo-relay: diversion-for-unknown-file
