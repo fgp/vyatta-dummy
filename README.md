@@ -37,4 +37,7 @@ configure
 set interfaces teredo-relay0 ipv4-endport address <IPv4 address of relay>    set interfaces teredo-relay0 ipv4-endport port <IPv4 port of relay>
 set interfaces teredo-relay0 firewall in ipv6-name <Ruleset for forwarded packets from teredo clients>
 set interfaces teredo-relay0 firewall local ipv6-name <Ruleset for local packets from teredo clients>
+commit
 ```
+
+Note that the IPv4 endpoint of the relay must be **publicly** accessible. Don't forgot to add necessary exlusion rules to your firewall.
