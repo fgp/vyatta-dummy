@@ -1,5 +1,5 @@
-The Debian Package vyatta-dummy
--------------------------------
+The Debian Package vyatta-teredo-relay
+--------------------------------------
 
 This package allows a teredo relay to be configured via Vyatta
 

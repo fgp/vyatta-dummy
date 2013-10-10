@@ -1,0 +1,17 @@
+tag:
+priority: 500
+type: txt
+help: Teredo relay interface name
+val_help: teredo-relay0; Teredo relay interface name, must be teredo-relay0
+syntax:expression: [ "$VAR(@)" = "teredo-relay0" ]
+	; "Teredo relay interface must be named teredo-relay0"
+create:
+	sudo /opt/vyatta/sbin/vyatta-update-miredo enable \
+		"$VAR(ipv4-endpoint/address/@)" \
+		"$VAR(ipv4-endpoint/port/@)"
+update:
+	sudo /opt/vyatta/sbin/vyatta-update-miredo enable \
+		"$VAR(ipv4-endpoint/address/@)" \
+		"$VAR(ipv4-endpoint/port/@)"
+delete:
+	sudo /opt/vyatta/sbin/vyatta-update-miredo disable
