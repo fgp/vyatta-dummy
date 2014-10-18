@@ -1,3 +1,9 @@
+vyatta-teredo-relay (2.1) precise; urgency=low
+
+  * Renamed interface to teredorelay0
+
+ -- Florian Pflug <fgp@phlo.org>  Sat, 18 Oct 2014 18:48:15 +0200
+
 vyatta-teredo-relay (2.0.1) unstable; urgency=low
 
   * Reverted to using end: instead of create:/update:/delete:
