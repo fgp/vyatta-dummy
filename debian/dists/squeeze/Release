@@ -1,27 +1,27 @@
 Origin: Florian Pflug
 Label: Florian Pflug
 Codename: squeeze
-Date: Thu, 10 Oct 2013 16:48:26 UTC
+Date: Sat, 18 Oct 2014 16:53:47 UTC
 Architectures: mips
 Components: contrib
 Description: Vyatta toredo relay extension APT repository
 MD5Sum:
- 407ce44c5bdf6f9b762363b75b3cd91e 630 contrib/binary-mips/Packages
- 5d6c1313aa770e9f819c4f14b5d2e5f5 389 contrib/binary-mips/Packages.gz
+ b5481fb480dc939e2af419bb2b002653 626 contrib/binary-mips/Packages
+ 99069d1e62a99a7fb75e086493027ae8 389 contrib/binary-mips/Packages.gz
  de1321cb1fb1834498e759aa896c43c2 139 contrib/binary-mips/Release
  4f0d05bb4a5c1b64ade500ad8efd2b89 889 contrib/source/Sources
  32a2f8939fab1070a97475c444e3a611 476 contrib/source/Sources.gz
  efe5bd87c1f95c47e886a39e04775440 141 contrib/source/Release
 SHA1:
- d12914868503ce1e8fd816f3057d6cdad50a7f7e 630 contrib/binary-mips/Packages
- 1a6dded386bc0a3d4fbf5760a1dfd22e1f054b25 389 contrib/binary-mips/Packages.gz
+ 60b5a339b586c421ebf472815015db489ec159d8 626 contrib/binary-mips/Packages
+ 700812e9daf0db4ec8105d8b447fb4b1388b1ade 389 contrib/binary-mips/Packages.gz
  ceb5144b5fb4d2c1f141a92e7d04f80ed8f9ac6f 139 contrib/binary-mips/Release
  78afabd80b6618ec39b91781de5e9745b8ac2888 889 contrib/source/Sources
  0c8ae69dcf770e2f9e592a1685bddc4bbf0fcd2d 476 contrib/source/Sources.gz
  0916beb957058025bfb057d274c8e17c82eca6bd 141 contrib/source/Release
 SHA256:
- 267e9f7a51fd35ea39a763eafc9bf4214e5b8dcd71b2a96b33676feae14dc772 630 contrib/binary-mips/Packages
- e9fbdf407c3d3b28b195e51723ae5178490eefc0db2be95f435b5844cf9c22c5 389 contrib/binary-mips/Packages.gz
+ b5faa9ae7b8d98cc1ebb2f41ec5177f556b364acf296a4a23952aae529618b1d 626 contrib/binary-mips/Packages
+ c4d55e94dc8ec3e288bd9bb2776d5defef43c90fb5c40796ec0708f4b12921fa 389 contrib/binary-mips/Packages.gz
  3f8d2bd01a9ba2233aee0ea1111de5f8eea74bcb06fe9c80d9e8dd3370717ca6 139 contrib/binary-mips/Release
  3434c00d60c9ad34d88ba38123d8dc07a9012c3879bd3943d14b5e1c7cb01a39 889 contrib/source/Sources
  cded3b38c0ca34cc39e5c80a0bc051d8f46c62a5f979c79d67586675f1f03fc9 476 contrib/source/Sources.gz
