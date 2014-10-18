@@ -2,9 +2,9 @@ tag:
 priority: 500
 type: txt
 help: Teredo relay interface name
-val_help: teredo-relay0; Teredo relay interface name, must be teredo-relay0
-syntax:expression: $VAR(@) == "teredo-relay0"
-	; "Teredo relay interface must be named teredo-relay0"
+val_help: teredorelay0; Teredo relay interface name, must be teredorelay0
+syntax:expression: $VAR(@) == "teredorelay0"
+	; "Teredo relay interface must be named teredorelay0"
 
 end:
 	case ${COMMIT_ACTION} in
@@ -18,7 +18,7 @@ end:
 			sudo /opt/vyatta/sbin/vyatta-update-miredo disable
 			;;
 		*)
-			echo "teredo-relay doesn't support ${COMMIT_ACTION}"
+			echo "teredorelay doesn't support ${COMMIT_ACTION}"
 			exit 1
 			;;
 	esac
